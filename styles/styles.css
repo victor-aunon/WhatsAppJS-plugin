@@ -2,6 +2,7 @@
     --primary: #2DB742;
     --secondary: #FFFFFF;
     --tertiary: #ececec;
+    --fontFamily: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -32,7 +33,7 @@ body {
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fontFamily);
 }
 
 .whatsapp-contact.expanded {
@@ -60,8 +61,11 @@ body {
     margin-left: -10px;
 }
 
-.whatsapp-icon.expanded {
+#button-img.expanded {
     cursor: pointer;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    animation: fade-in 2s;
 }
 
 .whatsapp-contact .contact {

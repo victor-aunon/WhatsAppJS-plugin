@@ -37,7 +37,6 @@ message.addEventListener('click', event => {
     event.preventDefault();
 
     if (message.classList.contains('active')) {
-        whatsappIcon.classList.add('interact')
         // Hide message
         message.classList.remove('active');
         message.classList.add('inactive');
@@ -52,9 +51,7 @@ message.addEventListener('click', event => {
         manageTimetable();
         // Change whatsapp icon image
         whatsappButtonImg.src = '../img/close.png';
-        whatsappButtonImg.style.border = '2px solid white';
-        whatsappButtonImg.style.borderRadius = '40px';
-        whatsappButtonImg.style.cursor = 'pointer';
+        whatsappButtonImg.classList.add('expanded');
     }
 });
 
@@ -65,33 +62,34 @@ function manageTimetable() {
 
     if (!data.daysOpen.includes(day)) {
         // Hide contact instructions
-        contactSubtitle.classList.remove('active')
-        contactSubtitle.classList.add('inactive')
+        contactSubtitle.classList.remove('active');
+        contactSubtitle.classList.add('inactive');
         // Hide contact button
         contactButton.classList.remove('active');
         contactButton.classList.add('inactive');
         // Show timetable
-        timetableTitleText.classList.remove('inactive')
-        timetableTitleText.classList.add('active')
-        timetableTitleText.textContent = 'Lo sentimos, hoy no estamos disponibles';
-        timetableText.classList.remove('inactive')
-        timetableText.classList.add('active')
-        timetableText.innerHTML = `Inténtalo de ${data.timeOpenTextDays} ${data.timeOpenTextHours}`
+        timetableTitleText.classList.remove('inactive');
+        timetableTitleText.classList.add('active');
+        timetableTitleText.textContent =
+            'Lo sentimos, hoy no estamos disponibles';
+        timetableText.classList.remove('inactive');
+        timetableText.classList.add('active');
+        timetableText.innerHTML = `Inténtalo de <strong>${data.timeOpenTextDays}</strong></br>de <strong>${data.timeOpenTextHours}</strong> horas`;
     } else {
         if (!data.timeOpenUTC.includes(hour)) {
             // Hide contact instructions
-            contactSubtitle.classList.remove('active')
-            contactSubtitle.classList.add('inactive')
+            contactSubtitle.classList.remove('active');
+            contactSubtitle.classList.add('inactive');
             // Hide contact button
             contactButton.classList.remove('active');
             contactButton.classList.add('inactive');
             // Show timetable
-            timetableTitleText.classList.remove('inactive')
-            timetableTitleText.classList.add('active')
+            timetableTitleText.classList.remove('inactive');
+            timetableTitleText.classList.add('active');
             timetableTitleText.textContent = 'En breve estamos disponibles';
-            timetableText.classList.remove('inactive')
-            timetableText.classList.add('active')
-            timetableText.innerHTML = `Inténtalo de ${data.timeOpenTextHours}`
+            timetableText.classList.remove('inactive');
+            timetableText.classList.add('active');
+            timetableText.innerHTML = `Inténtalo de <strong>${data.timeOpenTextHours}</strong> horas`;
         }
     }
 }
@@ -102,8 +100,7 @@ whatsappIcon.addEventListener('click', event => {
     if (message.classList.contains('inactive')) {
         // Change whatsapp icon image
         whatsappButtonImg.src = '../img/whatsapp.png';
-        whatsappButtonImg.style.border = 'none';
-        whatsappButtonImg.style.cursor = 'auto';
+        whatsappButtonImg.classList.remove('expanded');
         // Hide contact container
         contactButtonContainer.classList.remove('active');
         contactButtonContainer.classList.add('inactive');
