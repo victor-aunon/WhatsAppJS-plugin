@@ -1,0 +1,180 @@
+:root {
+    --wap_primary: #2DB742;
+    --wap_secondary: #FFFFFF;
+    --wap_tertiary: #ececec;
+    --wap_fontFamily: Arial, Helvetica, sans-serif;
+}
+
+/* =============== WHATSAPP PLUGIN SMALL BUTTON =============== */
+.wap-mini-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.wap-mini-button img {
+    width: 100%;
+    border: 2px solid var(--wap_secondary);
+    border-radius: 50%;
+}
+/* =============== END OF WHATSAPP PLUGIN SMALL BUTTON =============== */
+
+/* =============== WHATSAPP PLUGIN BOX =============== */
+.wap-box {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--wap_fontFamily);
+    border: 2px solid var(--wap_primary);
+    background: var(--wap_secondary);
+    border-radius: 40px;
+    width: 350px;
+    max-width: 380px;
+    min-width: 310px;
+}
+/* =============== END OF WHATSAPP PLUGIN BOX =============== */
+
+/* ===============  WHATSAPP PLUGIN BOX UPPER BAR =============== */
+.wap-box-bar {
+    display: flex;
+    align-items: center;
+    /* height: 75px; */
+}
+
+.wap-toggle-button {
+    flex: 1 1 70px;
+    padding: 0.3rem;
+    height: 70px;
+    cursor: pointer;
+}
+
+.wap-toggle-button img {
+    width: 100%;
+    border: 2px solid var(--wap_secondary);
+    border-radius: 50%;
+}
+
+.wap-info-message {
+    flex: 1 1 80%;
+    margin-right: 0.3rem;
+    user-select: none;
+}
+
+.wap-info-title {
+    margin: 0 0 0.4rem 0;
+    text-align: center;
+}
+
+.wap-info-subtitle {
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wap-expanded .wap-box-bar{
+    background-color: var(--wap_primary);
+    border-radius: 37px 37px 0 0;
+    color: var(--wap_secondary);
+    padding: .6rem 0;
+    transition: background-color 0.2s ease-out;
+}
+
+.wap-expanded .wap-info-title{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.wap-expanded .wap-info-subtitle {
+    font-weight: normal;
+    line-height: 1.3rem;
+}
+/* =============== END OF WHATSAPP PLUGIN BOX UPPER BAR =============== */
+
+/* =============== WHATSAPP CONTACT DATA =============== */
+.wap-contact-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3rem 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.wap-contact-button {
+    border-left: 5px solid var(--wap_primary);
+    padding: 0.4rem 1.5rem;
+    background-color: var(--wap_tertiary);
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1.5rem;
+}
+
+.wap-contact-button img {
+    height: 30px;
+    margin-right: 0.6rem;
+}
+
+.wap-timetable-title {
+    font-weight: 600;
+    margin: 0.1rem 0 0.5rem 0;
+}
+
+.wap-timetable-subtitle {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4rem;
+}
+/* =============== END OF WHATSAPP CONTACT DATA =============== */
+
+/* =============== VISIBILITY CLASSES =============== */
+.wap-hidden {
+    display: none;
+}
+
+.wap-visible {
+    display: flex;
+}
+
+.wap-active {
+    display: block;
+    animation: wap_fade-in 0.7s;
+}
+
+.wap-inactive {
+    display: none;
+    animation: wap_fade-out 0.7s;
+}
+/* =============== END OF VISIBILITY CLASSES =============== */
+
+/* =============== ANIMATIONS =============== */
+@keyframes wap_fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes wap_fade-out {
+    from {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    to {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+/* =============== END OF ANIMATIONS =============== */

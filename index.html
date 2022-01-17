@@ -5,32 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/wap_styles.css">
 </head>
 <body>
-    <div class="whatsapp-contact inactive" id="whatsapp-contact">
-        <div class="contact">
-            <div class="whatsapp-icon" id="whatsapp-icon">
-                <img src="img/whatsapp.png" alt="WhatsApp icon" id="button-img">
+    <div class="wap-mini-button wap-active" id="wap-mini-button">
+        <img src="img/wap_whatsapp.png" alt="WhatsApp icon" id="wap-button-img">
+    </div>
+    <div class="wap-box wap-inactive" id="wap-box">
+        <div class="wap-box-bar" id="wap-box-bar">
+            <div class="wap-toggle-button" id="wap-toggle-button">
+                <img src="img/wap_close.png" id="wap-button-img">
             </div>
-            <div class="message active" id="message">
-                <p>¿Quieres hacernos una pregunta?</p>
-                <p><strong>Haz clic aquí para hablarnos por WhatsApp</strong></p>
-            </div>
-            <div class="message-expanded inactive" id="message-expanded">
-                <p class="contact-title">Pregúntanos cualquier duda</p>
-                <p class="contact-subtitle">Haz clic abajo para abrir WhatsApp y hablarnos directamente</p>
+            <div class="wap-info-message" id="wap-info-message">
+                <p class="wap-info-title" id="wap-title"></p>
+                <p class="wap-info-subtitle" id="wap-subtitle"></p>
             </div>
         </div>
-        <div class="contact-container inactive" id="contact-container">
-            <a href="#" class="contact-button active" id="contact-button" rel="noopener noreferrer nofollow" >
-                <img src="img/whatsapp.png" alt="WhatsApp icon">
+        <div class="wap-contact-data wap-hidden" id="wap-contact-data">
+            <a href="#" class="wap-contact-button" id="wap-contact-button" rel="noopener noreferrer nofollow" >
+                <img src="img/wap_whatsapp.png" alt="WhatsApp icon">
             </a>
-            <p class="timetable-title inactive" id="timetable-title"></p>
-            <p class="timetable inactive" id="timetable"></p>
+            <p class="wap-timetable-title" id="wap-timetable-title" style="display: none;"></p>
+            <p class="wap-timetable-subtitle" id="wap-timetable-subtitle" style="display: none;"></p>
         </div>
     </div>
 
-    <script src="/scripts/main.js" type="module"></script>
+    <script src="/scripts/wapMain.js" type="module"></script>
 </body>
 </html>
