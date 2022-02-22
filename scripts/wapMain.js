@@ -55,7 +55,9 @@ wapSubtitleText.addEventListener('click', () => {
     // Change box bar texts
     switchBoxBarContent();
     // Set Contact data
-    wapContactBtn.lastChild.textContent = data.name;
+    wapContactBtn.innerHTML = `
+        <img src="img/wap_whatsapp.png" alt="WhatsApp icon"> ${data.name}
+    `
     setWhatsAppCall(data.phone);
     // Display contact info according to day and hour
     manageTimetable();
