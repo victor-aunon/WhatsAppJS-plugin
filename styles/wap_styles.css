@@ -3,15 +3,16 @@
     --wap_secondary: #FFFFFF;
     --wap_tertiary: #ececec;
     --wap_fontFamily: Arial, Helvetica, sans-serif;
+    --wap_iconSize: 70px;
 }
 
 /* =============== WHATSAPP PLUGIN SMALL BUTTON =============== */
 .wap-mini-button {
     position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    height: 70px;
-    width: 70px;
+    bottom: 1rem;
+    right: 1rem;
+    height: var(--wap_iconSize);
+    width: var(--wap_iconSize);
     cursor: pointer;
 }
 
@@ -25,8 +26,8 @@
 /* =============== WHATSAPP PLUGIN BOX =============== */
 .wap-box {
     position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: 1rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
     font-family: var(--wap_fontFamily);
@@ -47,9 +48,9 @@
 }
 
 .wap-toggle-button {
-    flex: 1 1 70px;
+    flex: 1 1 var(--wap_iconSize);
     padding: 0.3rem;
-    height: 70px;
+    height: var(--wap_iconSize);
     cursor: pointer;
 }
 
@@ -119,6 +120,10 @@
     margin: 0.5rem 1.5rem;
 }
 
+.wap-contact-name {
+    margin: 0;
+}
+
 .wap-contact-button img {
     height: 30px;
     margin-right: 0.6rem;
@@ -132,6 +137,8 @@
 .wap-timetable-subtitle {
     margin: 0 0 0.5rem 0;
     line-height: 1.4rem;
+    padding: 0 1rem;
+    text-align: center;
 }
 /* =============== END OF WHATSAPP CONTACT DATA =============== */
 
