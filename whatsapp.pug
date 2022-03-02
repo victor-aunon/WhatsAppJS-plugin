@@ -1,0 +1,22 @@
+<!-- WHATSAPP FLOATING BUTTON -->
+#wap-mini-button.wap-mini-button.wap-active 
+    img#wap-button-img(src=require("./img/wap_whatsapp.png"), alt="WhatsApp icon")
+#wap-box.wap-box.wap-inactive 
+    #wap-box-bar.wap-box-bar 
+        #wap-toggle-button.wap-toggle-button 
+            img#close-button-img(
+              src=require("./img/wap_close.png"),
+              alt="Close button"
+            )
+        #wap-info-message.wap-info-message 
+            p#wap-title.wap-info-title 
+            p#wap-subtitle.wap-info-subtitle 
+    #wap-contact-data.wap-contact-data.wap-hidden
+        a#wap-contact-button.wap-contact-button(
+          href="#",
+          rel="noopener noreferrer nofollow"
+        ) 
+            img(src=require("./img/wap_whatsapp.png"), alt="WhatsApp icon")
+            p#wap-contact-name.wap-contact-name
+        p#wap-timetable-title.wap-timetable-title(style="display: none")
+        p#wap-timetable-subtitle.wap-timetable-subtitle(style="display: none")
